@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="container">
+    <!--img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>BokenjiKan</h1-->
+  </div>
+</div>
+
+<div class="cities">
+  <div class="container">
+    <div class="cards row">
+      <%= react_component("Header", { greeting: "Cities" }) %>
+    	<% @cities.each do |c| %>
+      <div class="card col-xs-4">
+        <!--%= image_tag c.image %>
+        <h2><%= link_to c.name, city_path(c) %></h2-->
+        <%= react_component("CityCard", { city: c, link: city_path(c)}) %>
+      </div>
+      <!--%= link_to "Learn more", tag_path(t) %-->
+      <% end %>
+    </div>
+  </div>
+</div>

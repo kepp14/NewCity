@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="container">
+    <!--img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>BokenjiKan</h1-->
+  </div>
+</div>
+
+<div class="city">
+  <div class="container">
+    <h2 class="city-title"><%= @city.name %></h2>
+    <div class="cards row">
+      <% @homes.each do |h| %>
+      <div class="card col-xs-4">
+        <h2> <%= h.address %> </h2>
+        <p> $<%= h.rent %> </p>
+        <p> <%= h.neighborhood %> </p>
+        <!--%= link_to "See more", destination_path(d) %-->
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
